@@ -5,8 +5,8 @@ import Prices from '../components/Prices';
 import '../styles/Home.scss';
 
 import { useQuery } from '@apollo/react-hooks';
-import { withApollo } from '../util/apollo-client';
-import JOBS_QUERY from '../graphql/jobs.query';
+import { withApollo } from '../graphql/apollo';
+import { JOBS_QUERY } from '../graphql/queries';
 
 
 const Home = (props) => {
@@ -14,9 +14,8 @@ const Home = (props) => {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
-
-
   console.log(data);
+
   return (
     <Layout>
       <p className="title">home page</p>
@@ -36,4 +35,4 @@ Home.getInitialProps = async function () {
 }
 
 
-export default withApollo(Home, { ssr: false });
+export default withApollo(Home);

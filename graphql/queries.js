@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
 
-const JOBS_QUERY = gql`
+export const JOBS_QUERY = gql`
   query Jobs {
     jobs {
       id
@@ -9,4 +9,3 @@ const JOBS_QUERY = gql`
   }
 `;
 
-export default JOBS_QUERY;
