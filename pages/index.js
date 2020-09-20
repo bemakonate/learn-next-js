@@ -18,6 +18,7 @@ const Home = (props) => {
 
   return (
     <Layout>
+      <h2>Deployed with git</h2>
       <p className="title">home page</p>
       <p>Check current bitcoin rate</p>
       <Prices bpi={props.bpi} />
